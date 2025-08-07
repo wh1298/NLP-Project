@@ -9,8 +9,13 @@ import numpy as np
 from datetime import datetime
 
 # Utils
-import joblib 
-pipe_lr = joblib.load(open("models/emotion_classifier_pipe_lr.pkl","rb"))
+import os
+import joblib
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "emotion_classifier_pipe_lr.pkl")
+
+pipe_lr = joblib.load(open(MODEL_PATH, "rb"))
 
 
 # Track Utils
