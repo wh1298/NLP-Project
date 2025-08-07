@@ -42,7 +42,7 @@ def main():
 	create_emotionclf_table()
 	if choice == "Home":
 		add_page_visited_details("Home",datetime.now())
-		st.subheader("Home-Emotion In Text")
+		st.subheader("Emotion Predictor")
 
 		with st.form(key='emotion_clf_form'):
 			raw_text = st.text_area("Type Here")
